@@ -4,29 +4,21 @@ import './Header.css';
 
 const Header = ({ title, showLogo = true }) => {
     const [deferredPrompt, setDeferredPrompt] = useState(null);
-    const [showInstallButton, setShowInstallButton] = useState(false);
 
     useEffect(() => {
         const handler = (e) => {
             e.preventDefault();
             setDeferredPrompt(e);
-            setShowInstallButton(true);
         };
 
         window.addEventListener('beforeinstallprompt', handler);
-
-        // Check if already installed
-        if (window.matchMedia('(display-mode: standalone)').matches) {
-            setShowInstallButton(false);
-        }
-
         return () => window.removeEventListener('beforeinstallprompt', handler);
     }, []);
 
     const handleInstallClick = async () => {
         if (!deferredPrompt) {
-            // Fallback for iOS or if prompt not available
-            alert('To install:\n\niOS: Tap Share → Add to Home Screen\nAndroid: Tap menu → Install app');
+            // Fallback instructions for all platforms
+            alert('To install ONGO App:\n\n📱 Android/Chrome: Look for "Install" in browser menu\n🍎 iOS/Safari: Tap Share (□↑) → Add to Home Screen\n💻 Desktop: Look for install icon (⊕) in address bar');
             return;
         }
 
@@ -38,7 +30,6 @@ const Header = ({ title, showLogo = true }) => {
         }
 
         setDeferredPrompt(null);
-        setShowInstallButton(false);
     };
 
     return (
@@ -50,16 +41,14 @@ const Header = ({ title, showLogo = true }) => {
             )}
             {title && <h1 className="header-title">{title}</h1>}
 
-            {showInstallButton && (
-                <button
-                    className="install-button"
-                    onClick={handleInstallClick}
-                    title="Install ONGO App"
-                >
-                    <Download size={20} />
-                    <span className="install-text">Install</span>
-                </button>
-            )}
+            <button
+                className="install-button"
+                onClick={handleInstallClick}
+                title="Install ONGO App"
+            >
+                <Download size={20} />
+                <span className="install-text">Install</span>
+            </button>
         </header>
     );
 };
