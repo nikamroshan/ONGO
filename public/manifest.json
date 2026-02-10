@@ -1,0 +1,30 @@
+{
+    "name": "ONGO - Unified Logistics Platform",
+    "short_name": "ONGO",
+    "description": "India's Unified Logistics Operating System - Everything that moves India, ONGO manages it.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#22c55e",
+    "orientation": "portrait",
+    "icons": [
+        {
+            "src": "/icons/icon.svg",
+            "sizes": "any",
+            "type": "image/svg+xml",
+            "purpose": "any maskable"
+        }
+    ],
+    "categories": [
+        "logistics",
+        "business",
+        "productivity"
+    ],
+    "screenshots": [
+        {
+            "src": "/screenshots/home.png",
+            "sizes": "540x720",
+            "type": "image/png"
+        }
+    ]
+}
