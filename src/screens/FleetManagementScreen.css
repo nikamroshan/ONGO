@@ -1,0 +1,84 @@
+.fleet-screen {
+    min-height: 100vh;
+    background: var(--color-background);
+    padding-bottom: 80px;
+}
+
+.fleet-content {
+    padding: var(--spacing-md);
+}
+
+.fleet-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+}
+
+.fleet-stats .stat-card {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-md);
+}
+
+.tab-navigation {
+    display: flex;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-lg);
+    background: var(--color-card);
+    padding: var(--spacing-xs);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border);
+}
+
+.tab-btn {
+    flex: 1;
+    padding: var(--spacing-sm) var(--spacing-md);
+    border: none;
+    background: transparent;
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-base);
+    font-weight: 600;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    font-family: var(--font-family);
+}
+
+.tab-btn:hover {
+    background: var(--color-background);
+}
+
+.tab-btn.active {
+    background: var(--color-primary);
+    color: white;
+}
+
+.driver-group {
+    margin-bottom: var(--spacing-xl);
+}
+
+.group-title {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    margin-bottom: var(--spacing-md);
+    color: var(--color-text-primary);
+}
+
+.drivers-grid,
+.trucks-grid {
+    display: grid;
+    gap: var(--spacing-md);
+}
+
+.driver-item {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 480px) {
+    .fleet-stats {
+        grid-template-columns: 1fr;
+    }
+}

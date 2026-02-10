@@ -1,0 +1,32 @@
+.orders-screen {
+    min-height: 100vh;
+    background: var(--color-background);
+    padding-bottom: 80px;
+}
+
+.orders-content {
+    padding: var(--spacing-md);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
+}
+
+.orders-section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.orders-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.empty-state {
+    padding: var(--spacing-xl);
+    text-align: center;
+    background: var(--color-card);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border);
+}

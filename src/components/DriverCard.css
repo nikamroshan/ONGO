@@ -1,0 +1,106 @@
+.driver-card {
+    background: var(--color-card);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-md);
+    border: 1px solid var(--color-border);
+    cursor: pointer;
+    transition: all var(--transition-base);
+}
+
+.driver-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+}
+
+.driver-card-header {
+    display: flex;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+}
+
+.driver-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--color-primary-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-primary-dark);
+    flex-shrink: 0;
+}
+
+.driver-info {
+    flex: 1;
+}
+
+.driver-name {
+    font-size: var(--font-size-base);
+    font-weight: 600;
+    margin: 0 0 var(--spacing-xs) 0;
+    color: var(--color-text-primary);
+}
+
+.driver-meta {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.status-indicator {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    font-size: var(--font-size-xs);
+    font-weight: 500;
+}
+
+.status-indicator .status-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+}
+
+.status-indicator.status-active {
+    color: var(--color-success);
+}
+
+.status-indicator.status-active .status-dot {
+    background-color: var(--color-success);
+}
+
+.status-indicator.status-idle {
+    color: var(--color-warning);
+}
+
+.status-indicator.status-idle .status-dot {
+    background-color: var(--color-warning);
+}
+
+.status-indicator.status-offline {
+    color: var(--color-text-light);
+}
+
+.status-indicator.status-offline .status-dot {
+    background-color: var(--color-text-light);
+}
+
+.driver-stats {
+    display: flex;
+    gap: var(--spacing-md);
+    padding: var(--spacing-sm) 0;
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+    margin-bottom: var(--spacing-md);
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+}
+
+.driver-footer {
+    display: flex;
+    justify-content: flex-end;
+}

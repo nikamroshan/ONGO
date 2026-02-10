@@ -1,0 +1,100 @@
+.load-details-screen {
+    min-height: 100vh;
+    background: var(--color-background);
+    padding-bottom: 80px;
+}
+
+.load-details-content {
+    padding: var(--spacing-md);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.success-banner {
+    background: var(--color-success);
+    color: white;
+    padding: var(--spacing-md);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    font-weight: 600;
+    animation: fadeIn var(--transition-base);
+}
+
+.load-info-grid {
+    display: grid;
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-md);
+}
+
+.info-item {
+    display: flex;
+    gap: var(--spacing-md);
+    align-items: flex-start;
+}
+
+.info-label {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: var(--spacing-xs);
+}
+
+.info-value {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    color: var(--color-text-primary);
+}
+
+.info-meta {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+    margin-top: var(--spacing-xs);
+}
+
+.revenue-breakdown {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-md);
+}
+
+.revenue-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-sm) 0;
+}
+
+.revenue-row.highlight {
+    background: rgba(34, 197, 94, 0.05);
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-primary-light);
+}
+
+.revenue-row.total {
+    border-top: 2px solid var(--color-border);
+    padding-top: var(--spacing-md);
+    margin-top: var(--spacing-sm);
+}
+
+.revenue-label {
+    font-size: var(--font-size-base);
+    color: var(--color-text-secondary);
+}
+
+.revenue-value {
+    font-size: var(--font-size-lg);
+    color: var(--color-text-primary);
+}
+
+.assignment-section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    animation: fadeIn var(--transition-base);
+}
